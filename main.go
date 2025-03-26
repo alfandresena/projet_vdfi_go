@@ -82,6 +82,20 @@ func main() {
 
 	/***********************************************/
 
+	/***********************************************/
+
+	// Routes admin pour les paroles
+	ticketRoutes := r.Group("/tickets")
+	ticketRoutes.Use(middlewares.DBMiddleware())   // Appliquer le middleware qui injecte la base de données
+	ticketRoutes.Use(middlewares.AuthMiddleware()) // L'utilisateur doit être connecté
+
+	{
+		ticketRoutes.POST("/:event_id", controllers.CreateTicket) // Obtenir un ticket
+		ticketRoutes.GET("/", controllers.GetUserTickets)         // Voir ses tickets
+		ticketRoutes.DELETE("/:id", controllers.DeleteTicket)     // Supprimer un ticket
+	}
+
+	/***********************************************/
 	// Démarrer le serveur
 	if err := r.Run(":3000"); err != nil {
 		fmt.Println("❌ Erreur au démarrage du serveur : ", err)

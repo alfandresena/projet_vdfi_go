@@ -7,4 +7,5 @@ func SyncDatabase() {
 	DB.AutoMigrate(&models.User{})
 	DB.AutoMigrate(&models.Event{})
 	DB.AutoMigrate(&models.Lyric{})
+	DB.AutoMigrate(&models.Ticket{})
 }
