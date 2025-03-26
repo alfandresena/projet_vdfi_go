@@ -1,9 +1,0 @@
-TICKET
-Obtenir une place avec ticket pour une evenement disponible et possibilite de le regarder via à une lien Zoom fournis
- mais il faut déja me connecter avant
-Une utilisateur ne peut avoir qu'une seul tick pour une evenment 
-une envemenent peuvent distribuer beacoup de ticket et l'id de tout les user qui ont voulu assister a une event sont enregistrer, 
-en enregistre aussi le nombre de personne qui regarde une events
-Il doivant etre connecter avant de pouvoir obtenir une ticket
-Le ticket est disponible seulement en fonction du date de l'evenements
-en envoies une token avec expiration du coups qui ce transofme en code QR scanable pour chaque evenement
